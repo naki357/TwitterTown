@@ -4,8 +4,8 @@ var path = require('path');
 //var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/routes');
-//var twitterAPIRoutes = require('./routes/twitterapi'); // Currently not used. 
+var routes = require('./controllers/routes');
+
 var app = express();
 var listenPort = 8080; 
 
@@ -24,7 +24,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Attach the routes to the app 
 app.use('/', routes);
 app.use('/dashboard', routes);
-app.use('/api/twitter/search/tweets', routes);
+
+//app.use('/api/twitter/search/tweets', twitterapi);  // Couldn't get this other route to work.
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

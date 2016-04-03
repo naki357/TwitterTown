@@ -1,5 +1,4 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -30,4 +29,8 @@ a {
 .tweet-spacer{
     height: 4px; 
     clear: left;
+}
+
+.navbar{
+    margin-bottom: 5px !important;
 }
